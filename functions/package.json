@@ -1,0 +1,26 @@
+{
+  "name": "firebase-webhook-bitbucket-chat",
+  "description": "Webhook function for post Bitbucket messages in Google Chat",
+  "engines": {
+    "node": "14"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase serve --only functions:bitbucketChatWebhook",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions:bitbucketChatWebhook",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "firebase-admin": "~9.9.0",
+    "firebase-functions": "^3.14.1",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "eslint-plugin-promise": "^5.1.0"
+  },
+  "private": true
+}
